@@ -39,7 +39,7 @@ Vehicle.prototype.arrive = function(target) {
 Vehicle.prototype.flee = function(target) {
   var desired = p5.Vector.sub(target, this.pos);
   var d = desired.mag();
-  if (d < 100) {
+  if (d < 50) {
     desired.setMag(this.maxSpeed);
     desired.mult(-1);
     var steer = p5.Vector.sub(desired, this.vel);
